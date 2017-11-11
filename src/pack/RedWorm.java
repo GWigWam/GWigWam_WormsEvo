@@ -45,14 +45,14 @@ public class RedWorm extends Worm{
 			if(wr.creatures[i] != null){
 				if(wr.creatures[i] instanceof GreenWorm){
 					if(wr.creatureDistance(this, wr.creatures[i]) < 100){
-						if(getSpeed() < (((Worm) wr.creatures[i]).getSpeed() - 0.3) + 0.8){
+						if(getSpeed() < (((Worm) wr.creatures[i]).getSpeed() - 0.3) + 1.0){
 							setSpeed(getSpeed() + 0.014);
 						}
 						if(getColor()[0] < 1.0){
 							float[] tmpColor = {getColor()[0] + 0.005f, getColor()[1], getColor()[2]};
 							setColor(tmpColor);
 						}
-						setHp(getHp() - 0.008); //Boost burns energy
+						setHp(getHp() - 0.006); //Boost burns energy
 						return;
 					}
 				}
